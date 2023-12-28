@@ -15,41 +15,9 @@ abstract class Base
     }
 }
 
-class Admin extends Base
-{
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
-}
 
-class User extends Base
-{
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
-}
 
-class Guest extends Base
-{
-    protected $name = 'Invitado';
-}
 
-$guest = new Guest();
 
-echo $guest->login();
-
-$user = new User('Miguel');
-
-echo $user->login();
-
-$admin = new Admin('Administrador');
-
-echo $admin->login();
-
-$guest2 = new Guest();
-
-echo $guest2->login();
 
 
